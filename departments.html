@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Department</title>
+    <link rel="stylesheet" href="department.css">
 </head>
 <body>
-    <h1>Departments</h1>
+    <main>
+        <div class="container">
+            <h2>Department</h2>
+            <hr>
+        
+            <button class="add-new" onclick="showAddForm()">+ Add New</button>
+            
+            <!-- Add/Edit Form -->
+            <div id="form-container" class="form-container">
+                <h3 id="form-title">Add New Department</h3>
+                <label for="dept-name">Department Name:</label>
+                <input type="text" id="dept-name" placeholder="Enter department name">
+                <label for="dept-description">Description:</label>
+                <input type="text" id="dept-description" placeholder="Enter description">
+                <button onclick="addOrUpdateDepartment()" id="submit-btn">Add Department</button>
+                <button onclick="hideForm()">Cancel</button>
+            </div>
+
+            <table id="department-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Department</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="department-tbody">
+                    <!-- Dynamic Rows will be added here -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button disabled>Previous</button>
+                <span>1</span>
+                <button>Next</button>
+            </div>
+        </div>
+    </main>
+    <script src="department.js"></script>
 </body>
 </html>

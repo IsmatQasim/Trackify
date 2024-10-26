@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Employee Performance Evaluation System</title>
+    <link rel="stylesheet" href="task.css">
 </head>
 <body>
-    <h1>Task</h1>
+        <h1 id="task">Task</h1>
+        <br>
+        <hr>
+        <br>
+        <button id="addTaskBtn">+ Add New Task</button>
+        <br><hr>
+        
+        <div class="main-content">
+            <table id="taskTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Task</th>
+                        <th>Due Date</th>
+                        <th>Assigned To</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic content will be added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="taskPopup" class="popup">
+            <form id="taskForm">
+                <div class="popup-title">+ New Task</div>
+                <div class="form-group">
+                <label for="task" class="label">Task</label>
+                <input type="text" id="taskName" required>
+                </div>
+                <div class="form-group">
+                <label>Due Date:</label>
+                <input type="date" id="dueDate" required>
+                </div>
+                <div class="form-group">
+                <label>Assigned To:</label>
+                <input type="text" id="assignedTo" required>
+                </div>
+                <div class="form-group">
+                <label>Status:</label>
+                <select id="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Complete">Complete</option>
+                </select>
+                </div>
+                <div class="button-container">
+                <button type="submit" class="save-button">Add Task</button>
+                <button type="button" id="closePopup">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="task.js"></script>
 </body>
 </html>
