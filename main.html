@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Performance Evaluation System</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body onload="showContent('dashboard')">
+    <div class="left-panel">
+      <h1>ADMIN</h1>
+      <div class="nav-item" onclick="showContent('dashboard')">
+        <img src="/dashboard.png" width="25px" /> Dashboard
+      </div>
+      <div class="nav-item" onclick="showContent('task')">
+        <img src="/task.png" width="25px" /> Task
+      </div>
+      <div class="nav-item" onclick="showContent('evaluation')">
+        <img src="/evaluation.png" width="25px" /> Evaluation
+      </div>
+      <div class="nav-item" onclick="showContent('departments')">
+        <img src="/departments.png" width="25px" /> Departments
+      </div>
+      <div class="nav-item" onclick="showContent('designations')">
+        <img src="/designations.png" width="25px" /> Designations
+      </div>
+      <div class="nav-item" onclick="showContent('employees')">
+        <img src="/employees.png" width="25px" /> Employees
+      </div>
+      <div class="nav-item" onclick="showContent('evaluator')">
+        <img src="/evaluator.png" width="25px" /> Evaluator
+      </div>
+      <div class="nav-item" onclick="showContent('user')">
+        <img src="/user.png" width="25px" /> User
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="header">
+        <img src="trackify.png" width="10%" />
+        <span class="admin"
+          ><img src="admin.png" width="30px" height="30px" />
+          Administrator</span
+        >
+      </div>
+      <div class="content" id="content"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
